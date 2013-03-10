@@ -20,7 +20,7 @@ on 'test' => sub {
     requires 'Test::Requires';
 };
 
-on 'configure' => sub {
+on 'develop' => sub {
     requires 'Module::Install::Authority';
-    requires 'Module::Install::ReadmeMarkdownFromPod';
+    requires 'Module::Install::ReadmeFromPod';
 };
