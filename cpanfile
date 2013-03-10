@@ -15,5 +15,12 @@ requires 'Hash::MultiValue', 0.05;          # Plack::Request
 requires 'HTTP::Body', 1.06;                # Plack::Request
 requires 'Test::TCP', 1.02;                 # Plack::Test needs to be installed
 
-build_requires 'Test::More', 0.88;
-test_requires 'Test::Requires';
+on 'test' => sub {
+    requires 'Test::More', 0.88;
+    requires 'Test::Requires';
+};
+
+on 'develop' => sub {
+    requires 'Module::Install::Authority';
+    requires 'Module::Install::ReadmeMarkdownFromPod';
+};
